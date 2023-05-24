@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Идём в бар?))0)</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('./assets/background.svg');
+            color: black;
+        }
+
+        button {
+            position: absolute;
+            transition: .5s;
+        }
+
+        #no {
+            top: 59%;
+            left: 43%;
+        }
+
+        #yes {
+            top: 59%;
+            left: 48%;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin: 5px;
+            background-color: rgb(0, 255, 21);
+            border: none;
+            border-radius: 15px;
+        }
+
+        button:hover {
+             transform: scale(1.1);
+        }
+
+        @media screen and (max-width: 500px) {
+            #no {
+                top: 59%;
+                left: 28%;
+            }
+
+            #yes {
+                top: 59%;
+                left: 42%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Идём сегодня в бар?)))0)</h1>
+    <div class="button-container">
+        <button id="no">Нет)</button>
+        <button id="yes">Ну конечно же да))</button>
+    </div>
+
+
+    <script>
+        const buttonNo = document.getElementById("no");
+        const buttonYes = document.getElementById("yes");
+
+        buttonYes.addEventListener('click', () => {
+            window.alert('Я знал)))')
+        });
+
+        buttonNo.addEventListener('mouseover', () => {
+            buttonNo.style.left = `${Math.floor(Math.random() * 100)}%`;
+            buttonNo.style.top = `${Math.floor(Math.random() * 100)}%`;
+        });
+
+        buttonNo.addEventListener('click', () => {
+            buttonNo.style.left = `${Math.floor(Math.random() * 100)}%`;
+            buttonNo.style.top = `${Math.floor(Math.random() * 100)}%`;
+        });
+
+    </script>
+</body>
+
+</html>
